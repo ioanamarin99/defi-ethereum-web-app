@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(32, 29, 29);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* -- CARDS -- */
+
+.cards__section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cards__section h3 {
+  margin: 50px 0 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  margin-top: 20px;
+}
+
+.card_reale {
+  width: 350px;
+  height: 275px;
+
+  border: 1px solid var(--clr-black);
+  margin: 10px auto;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: all 250ms ease;
+}
+
+.card_reale:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+.card__image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card__image img {
+  max-width: 100%;
+}
+
+.card__info {
+  width: 100%;
+  height: 60%;
+
+  background-color: white;
+  opacity: 0.5;
+
+  /* //padding: 5px 10px; */
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card__info h4 {
+  font-family: "Open Sans";
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.card__info p {
+  font-family: "Open Sans";
+  font-size: 0.90em;
+  margin-top: 5px;
+}
+
+/* -- PROPERTIES -- */
+
+.property {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.property__details {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  align-items: center;
+
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 20px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  /*background: var(--clr-white);*/
+  background-color: white;
+}
+
+.property__image {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.property__image img {
+  max-width: 100%;
+}
+
+.property__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.property__close img {
+  width: 25px;
+  height: 25px;
+}
+
+.property__overview {
+  height: 100%;
+  margin: 0 20px;
+  padding-right: 40px;
+
+  overflow-y: scroll;
+}
+
+.property__overview h1,
+.property__overview h2,
+.property__overview hr {
+  margin: 10px auto;
+}
+
+.property__overview ul {
+  margin-left: 40px;
+}
+
+.property__buy,
+.property__contact,
+.property__owned {
+  margin: 20px 5px;
+
+  background-color: blue;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Open Sans";
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.property__buy {
+  width: 225px;
+  height: 50px;
+}
+
+.property__buy:hover {
+  background-color: greenyellow;
+}
+
+.property__contact {
+  width: 150px;
+  height: 50px;
+
+  background-color: transparent;
+  color: var(--clr-blue);
+
+  border: 1px solid var(--clr-blue);
+}
+
+.property__contact:hover {
+  background-color: #f7f7f7;
+  color: var(--clr-blue-2);
+}
+
+.property__owned {
+  height: 50px;
+  background-color: #adff2f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.custom-card {
+  width: 500px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  padding: 20px;
+  transition: all 250ms ease;
+}
+
+.custom-card:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.modern-card-title {
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+.borrowing-items-title {
+  color: #f5f5f5;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.modern-card-body-elem {
+  color: #f5f5f5;
+}
+
+.img-eth {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.modern-card-input {
+  width: 225px;
+  height: 50px;
+}
+
+.title-header {
+  color: #f5f5f5;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.div-other-info {
+  color: #f5f5f5;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display:flex;
+  gap:20px;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.custom-card2 {
+  width: 500px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  padding: 20px;
+  transition: all 250ms ease;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.custom-card2:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+.custom-card2::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-card2::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 10px;
+}
+
+.custom-card2::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-card3 {
+  width: 80%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  padding: 20px;
+  transition: all 250ms ease;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.custom-card3::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-card3::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 10px;
+}
+
+.custom-card3::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+/* 
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+} */
+
+.centered-h-custom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f5;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+}
